@@ -101,7 +101,7 @@ or yarn
 
 `yarn add webpack-cdn-plugin --dev`
 
-
+NB! For some reason `app.html` stops getting compiled.
 
 # License
 
