@@ -187,7 +187,8 @@ module.exports = function makeWebpackConfig() {
       new WebpackCdnPlugin({
         modules: [
           {
-            name: 'angular'
+            name: 'angular',
+            path: 'angular.min.js'
             // var: '',
             // style: ''
           }
