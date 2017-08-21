@@ -45,6 +45,7 @@ go to [http://localhost:8080](http://localhost:8080) in your browser.
     * [Running the app](#running-the-app)
     * [Developing](#developing)
     * [Testing](#testing)
+    * [Extras](#extras)
 * [License](#license)
 
 # Getting Started
@@ -83,6 +84,10 @@ It will start a local server using `webpack-dev-server` which will watch, build 
 
 * single run: `npm test`
 * live mode (TDD style): `npm run test-watch`
+
+## Extras
+
+[Adding components (ui-router, bootstrap)](https://github.com/Nshuya/education-blog/commit/fec4d6ea52dd1b02977229af7e361a4c58a8bc91)
 
 # License
 
