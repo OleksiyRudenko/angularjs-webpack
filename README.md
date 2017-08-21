@@ -89,6 +89,20 @@ It will start a local server using `webpack-dev-server` which will watch, build 
 
 [Adding components (ui-router, bootstrap)](https://github.com/Nshuya/education-blog/commit/fec4d6ea52dd1b02977229af7e361a4c58a8bc91)
 
+### 3rd party libs -> cdn links
+
+[webpack-cdn-plugin](https://www.npmjs.com/package/webpack-cdn-plugin)
+
+Install the plugin with npm:
+
+`npm install webpack-cdn-plugin --save-dev`
+
+or yarn
+
+`yarn add webpack-cdn-plugin --dev`
+
+
+
 # License
 
 [MIT](/LICENSE)

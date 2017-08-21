@@ -4,6 +4,7 @@
 var webpack = require('webpack');
 var autoprefixer = require('autoprefixer');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var WebpackCdnPlugin = require('webpack-cdn-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
@@ -178,6 +179,21 @@ module.exports = function makeWebpackConfig() {
       new HtmlWebpackPlugin({
         template: './src/public/index.html',
         inject: 'body'
+      }),
+
+      // Reference: https://www.npmjs.com/package/webpack-cdn-plugin
+      // Enhances html-webpack-plugin functionality by allowing you to specify the modules you want to externalize from node_modules in development and a CDN in production.
+      // Basically this will allow you to greatly reduce build time when developing and improve page load performance on production.
+      new WebpackCdnPlugin({
+        modules: [
+          {
+            name: 'angular'
+            // var: '',
+            // style: ''
+          }
+        ],
+        prodUrl: '//cdnjs.cloudflare.com/ajax/libs/:name/:version/:path',
+        publicPath: '/node_modules'
       }),
 
       // Reference: https://github.com/webpack/extract-text-webpack-plugin
